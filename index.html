@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda de Instrumentos Musicales</title>
-    
+
     <style>
       /* --- ESTILOS GENERALES --- */
       * {
@@ -32,7 +32,6 @@
         z-index: 100;
       }
 
-      /* Tamaño del logo */
       .logo img {
         height: 60px;
         width: auto;
@@ -40,7 +39,6 @@
         display: block;
       }
 
-      /* Estilos del menú */
       nav ul {
         display: flex;
         list-style: none;
@@ -72,14 +70,12 @@
         color: #222;
       }
 
-      /* Grilla para las tarjetas de productos */
       .grid-productos {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
       }
 
-      /* Tarjeta individual */
       .card {
         background: #fff;
         border-radius: 10px;
@@ -127,7 +123,7 @@
         background-color: #e68a00;
       }
 
-      /* --- SECCIÓN OFERTAS ESPECÍFICAS --- */
+      /* --- SECCIÓN OFERTAS --- */
       #ofertas {
         background-color: #fff3e0;
         border-radius: 12px;
@@ -151,10 +147,92 @@
         font-size: 0.95rem;
         margin-right: 8px;
       }
+
+      /* --- SECCIÓN CONTACTO --- */
+      #contacto {
+        margin-top: 40px;
+      }
+
+      .contacto-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .contacto-info h3,
+      .contacto-form h3 {
+        margin-bottom: 15px;
+        color: #1a1a1a;
+      }
+
+      .contacto-info p {
+        margin-bottom: 12px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .contacto-info strong {
+        color: #222;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #444;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #ff9800;
+      }
+
+      .btn-enviar {
+        width: 100%;
+        padding: 12px;
+        background-color: #1a1a1a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-enviar:hover {
+        background-color: #ff9800;
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        background-color: #1a1a1a;
+        color: #aaa;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+        font-size: 0.9rem;
+      }
     </style>
   </head>
   <body>
-
     <!-- HEADER / NAVEGACIÓN -->
     <header>
       <div class="logo">
@@ -180,21 +258,30 @@
       <h2>Nuestros Productos</h2>
       <div class="grid-productos">
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400" alt="Guitarra Acústica" />
+          <img
+            src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400"
+            alt="Guitarra Acústica"
+          />
           <h3>Guitarra Acústica</h3>
           <p class="precio">$250.00</p>
           <a href="#" class="btn-comprar">Añadir al Carrito</a>
         </div>
 
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Teclado Eléctrico" />
+          <img
+            src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400"
+            alt="Teclado Eléctrico"
+          />
           <h3>Teclado Eléctrico</h3>
           <p class="precio">$420.00</p>
           <a href="#" class="btn-comprar">Añadir al Carrito</a>
         </div>
 
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400" alt="Batería Acústica" />
+          <img
+            src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400"
+            alt="Batería Acústica"
+          />
           <h3>Batería Acústica</h3>
           <p class="precio">$780.00</p>
           <a href="#" class="btn-comprar">Añadir al Carrito</a>
@@ -208,21 +295,95 @@
       <div class="grid-productos">
         <div class="card">
           <span class="badge-oferta">-20% DESCUENTO</span>
-          <img src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400" alt="Guitarra Eléctrica" />
+          <img
+            src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400"
+            alt="Guitarra Eléctrica"
+          />
           <h3>Guitarra Eléctrica Pro</h3>
-          <p class="precio"><span class="precio-anterior">$500.00</span> $400.00</p>
+          <p class="precio">
+            <span class="precio-anterior">$500.00</span> $400.00
+          </p>
           <a href="#" class="btn-comprar">Aprovechar Oferta</a>
         </div>
 
         <div class="card">
           <span class="badge-oferta">-15% DESCUENTO</span>
-          <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400" alt="Piano Digital" />
+          <img
+            src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400"
+            alt="Piano Digital"
+          />
           <h3>Piano Digital 88 Teclas</h3>
-          <p class="precio"><span class="precio-anterior">$650.00</span> $552.50</p>
+          <p class="precio">
+            <span class="precio-anterior">$650.00</span> $552.50
+          </p>
           <a href="#" class="btn-comprar">Aprovechar Oferta</a>
         </div>
       </div>
     </section>
 
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <div class="contacto-container">
+        <!-- Información de contacto -->
+        <div class="contacto-info">
+          <h3>¿Tienes alguna duda?</h3>
+          <p>
+            Visítanos en nuestra tienda o escríbenos un mensaje. Te
+            responderemos a la brevedad.
+          </p>
+          <p><strong>📍 Dirección:</strong> Av. Musical 123, Ciudad</p>
+          <p><strong>📞 Teléfono:</strong> +123 456 7890</p>
+          <p><strong>✉️ Email:</strong> contacto@tiendademusica.com</p>
+          <p><strong>⏰ Horario:</strong> Lun - Sáb: 9:00 AM - 7:00 PM</p>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <div class="contacto-form">
+          <h3>Envíanos un mensaje</h3>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="Escribe tu consulta aquí..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>&copy; 2026 Tienda de Música. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
