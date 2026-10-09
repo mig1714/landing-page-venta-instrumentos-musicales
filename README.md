@@ -44,7 +44,20 @@ git add archivo por archivo o git add . (todos)
 ```
     git commit -m "proyecto base"
 ```
+# Github 
+```
 
+git remote add origin https://github.com/mig1714/landing-page-venta-instrumentos-musicales.git
+
+```
+
+- Enviar los cambios al repositorio 
+
+```
+    git push origin main o master
+
+```
+ 
 #### Ejemplo
 
 Copiar el archivo .env.example a .env y actualizar las credencias
