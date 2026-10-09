@@ -22,6 +22,29 @@
 git init
 ```
 
+- Directorio de trabajo donde se escribe el codigo
+
+## Paso 2
+
+- Enviar los nuevos archivos modificados al area de preparacion
+
+```
+git add archivo por archivo o git add . (todos)
+
+```
+
+- El area de preparacion es donde se preparan los cambios
+
 ---
+
+## Paso 3
+
+- Registrar una descripcion del cambio realizado
+
+```
+    git commit -m "proyecto base"
+```
+
+#### Ejemplo
 
 Copiar el archivo .env.example a .env y actualizar las credencias
